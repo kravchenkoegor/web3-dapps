@@ -9,6 +9,7 @@ import {
   AdvancedStorageContract,
   SimpleStorageContract
 } from './contracts';
+import { CrudComponent } from './components';
 
 interface IAppState {
   web3: Web3 | null;
@@ -124,6 +125,13 @@ function App() {
                 >
                   advancedStorage.getIdsLength
                 </button>
+              </div>
+
+              <div className="col-12 mt-4">
+                <CrudComponent
+                  web3={state.web3}
+                  sender={state.sender}
+                />
               </div>
             </div>
           </div>
